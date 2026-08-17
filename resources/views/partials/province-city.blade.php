@@ -40,6 +40,7 @@ window.hmBindProvinceCity = function (provId, cityId) {
             '<option value="Other">Other</option>';
     });
 };
+
 </script>
 @endpush
 @endonce
