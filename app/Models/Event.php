@@ -38,7 +38,17 @@ class Event extends Model
 
     public function getFlierUrlAttribute(): ?string
     {
-        return $this->event_flier ? Storage::disk('public')->url($this->event_flier) : null;
+        if (! $this->event_flier) {
+            return null;
+        }
+
+        // Already a full URL (e.g. imported from Cloudinary) — use it as-is rather
+        // than prepending the local storage disk's URL prefix to it.
+        if (str_starts_with($this->event_flier, 'http://') || str_starts_with($this->event_flier, 'https://')) {
+            return $this->event_flier;
+        }
+
+        return Storage::disk('public')->url($this->event_flier);
     }
 
     public function getFlierIsImageAttribute(): bool

@@ -34,7 +34,12 @@
             <a href="{{ route('about') }}" class="btn btn-purple">Learn More</a>
         </div>
         <div class="visual reveal">
-            <img src="/images/home-about.jpg" alt="A family sharing a moment together">
+            <div class="slider">
+                <img src="/images/whoWeAre/who-we-are-1.jpeg" alt="Hearts and Mind community members together">
+                <img src="/images/whoWeAre/who-we-are-2.jpeg" alt="Hearts and Mind community members together">
+                <img src="/images/whoWeAre/who-we-are-3.jpeg" alt="Hearts and Mind community members together">
+                <img src="/images/whoWeAre/who-we-are-4.jpeg" alt="Hearts and Mind community members together">
+            </div>
         </div>
     </div>
 </section>
